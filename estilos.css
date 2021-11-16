@@ -89,6 +89,7 @@ a:active {
   margin-left: 2.5%;
   margin-right: 2.5%;
   display: inline-block;
+  position: relative;
 }
 
 #posts-principais .post .titulo {
@@ -147,6 +148,10 @@ a:active {
   background-size: 300px;
   box-shadow: -4px 0 10px rgba(0, 0, 0, 0.5);
   text-align: center;
+  box-sizing: border-box;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
 }
 
 #tags h1 {
@@ -258,4 +263,67 @@ a:active {
   color: black;
   border-color: currentColor;
   box-shadow: none;
+}
+
+/* --- ADICIONADO --- */
+
+nav ul {
+  list-style-type: none;
+  padding-left: none;
+}
+
+nav ul li{
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+#tags span:hover {
+  cursor: pointer;
+}
+
+#tags span:active {
+  position: relative;
+  top: -2px;
+  left: -2px;
+}
+
+.novidade::before {
+  content: "Novidade!";
+  display: inline-block;
+  background-color: green;
+  color: white;
+  border-radius: 5px;
+  padding: 4px;
+  display: inline-block;
+}
+
+#posts-principais .post .titulo {
+  background-color: rgba(255, 255, 255, 0.5);
+  top: 6px;
+  position: absolute;
+  padding: 10px;
+}
+
+.boo {
+  position: fixed;
+  bottom: 5vh;
+  width: 5vw;
+  opacity: 0.2;
+}
+
+.boo:hover {
+  opacity: 1;
+  transition: linear 1s;
+}
+
+#fantasma1 {
+  left: 5vw;
+}
+
+#fantasma2 {
+  left: 45vw;
+}
+
+#fantasma3 {
+  right: 5vw;
 }

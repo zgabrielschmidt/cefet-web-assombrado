@@ -6,12 +6,13 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Special+Elite|Aldrich">
     <link rel="stylesheet" href="estilos.css">
     <link rel="shortcut icon" href="imgs/favicon.png">
+    <script src="boos.js"></script>
   </head>
   <body>
-    <div id="cabecalho">
+    <header id="cabecalho">
       <h1>Blog Assombrado</h1>
       <h2>Notícias e reportagens sobre o desconhecido</h2>
-      <div id="menu-de-navegacao">
+      <nav id="menu-de-navegacao">
         <ul>
           <li><a href="index.html">Inicial</a></li>
           <li><a href="#ovnis.html">UFOlogia</a></li>
@@ -20,13 +21,13 @@
           <li><a href="#lugares-misteriosos.html">Lugares Misteriosos</a></li>
           <li><a href="#especiais.html">Especiais</a></li>
         </ul>
-      </div>
-    </div>
+      </nav>
+    </header>
 
     <!-- OBS: não remova a class="desaparecido" porque ela está sendo usada pra
          esconder este elemento até o vídeo acabar (tem uma regra CSS para
          ocultar quem tem .desaparecido)-->
-    <div id="conteudo-principal" class="desaparecido">
+    <main id="conteudo-principal" class="desaparecido">
       <!-- opa, <section> já é um elemento semântico. Dica: podemos
            dividir a página em 3 seções, e esta é uma delas -->
       <div id="tags">
@@ -40,65 +41,68 @@
         <span class="tag-1">Saci</span>
       </div>
 
-      <div id="posts-principais">
+      <section id="posts-principais">
         <h1>Principais Postagens</h1>
-        <div class="post">
+        <article class="post">
           <img src="imgs/arvores.jpg" alt="Uma floresta com várias árvores com caules tortos com espaço de aproximadamente 2m entre cada">
           <h2 class="titulo">
             Conheça a Enigmática "Crooked Forest": Centenas de Árvores
             em uma Floresta Foram Entortadas por "Forças Misteriosas", na Polônia?
           </h2>
           <span class="data-horario" datetime="2021-05-09">09 de maio de 2021</span>
-        </div>
-        <div class="post">
+        </article>
+        <article class="post">
           <img src="imgs/ursa.jpg" alt="Duas fotos de ursos polares em um ambiente que imita cavernas glaciais e outra foto aérea de um parque temático com diversos ambientes aquáticos">
           <h2 class="titulo">
             O Mistério de Szenja: Uma Ursa Polar Morreu de "Coração Partido"
             ao ser Separada de Sua Companheira no SeaWorld, nos Estados Unidos?
           </h2>
           <span class="data-horario" datetime="2021-05-09">07 de maio de 2021</span>
-        </div>
-      </div>
+        </article>
+      </section>
 
-      <div id="ultimas-postagens">
+      <section id="ultimas-postagens">
         <h1>Últimas Postagens</h1>
         <!-- class="palavra1 palavra2" quer dizer que o elemento possui DUAS
              CLASSES. Portanto, uma regra CSS .palavra1 seleciona ele, bem
              como uma .palavra2 -->
-        <div class="post novidade">
+        <article class="post novidade">
           <span class="data-horario" datetime="2021-05-09">09/05/2021</span>
           <h2 class="titulo">
             O Projeto Manhatan e a Construção das
             Primeiras Bombas Atômicas
           </h2>
-        </div>
-        <div class="post novidade">
+        </article>
+        <article class="post novidade">
           <span class="data-horario" datetime="2021-05-09">09/05/2021</span>
           <h2 class="titulo">
             A Misteriosa "Vulture Stone": Um "Pilar de
             Pedra" Provocou um Verdadeiro Caos na
             Terra Há 13 Mil Anos?
           </h2>
-        </div>
-        <div class="post">
+        </article>
+        <article class="post">
           <span class="data-horario" datetime="2021-05-08">08/05/2021</span>
           <h2 class="titulo">
             O "Fantasma de um Homem" Subindo uma Escadaria
             Apareceu em uma Mansão "Mal-Assombrada" do Século XVII, na
             Inglaterra?
           </h2>
-        </div>
-        <div class="post">
+        </article>
+        <article class="post">
           <span class="data-horario" datetime="2021-04-16">16/04/2021</span>
           <h2 class="titulo">
             Sereias: Lenda, Fotos, Vídeos, Relatos e
             Análises. Será que elas existem?
           </h2>
-        </div>
-      </div>
-    </div>
+        </article>
+      </section>
+      <img id="fantasma1" class="boo" src="imgs/boo1.gif" alt="Fantasma do jogo Mário dando risada">
+      <img id="fantasma2" class="boo" src="imgs/boo2.gif" alt="Fantasma do jogo Mário comendo">
+      <img id="fantasma3" class="boo" src="imgs/boo3.gif" alt="Fantasma do jogo Mário maluco">
+    </main>
 
-    <div id="rodape">
+    <footer id="rodape">
       <img class="logo-rodape" src="imgs/logo-assombrado.png" alt="Logo do canal do Youtube Assombrado composto por uma letra A dentro de um círculo e os dizeres 'O desconhecido levado a sério'">
       <div>
         <p class="texto-rodape">
@@ -108,9 +112,21 @@
           <a href="http://assombrado.com.br" target="_blank">AssombradO.com.br</a>
         </p>
         <div id="inscreva-se">
+          <form>
+            <h3>
+              Inscreva-se!
+            </h3>
+            <label for="email">Email:</label>
+            <input name="email" type="email"/>
+            <label for="nome">Nome:</label>
+            <input name="nome" type="text"/>
+            <input name="promocoes" type="checkbox">
+            <label for="promocoes">Aceito promoções</label>
+            <button>Enviar</button>
+          </form>
         </div>
       </div>
-    </div>
+    </footer>
 
     <!-- não remova a class="backdrop" porque ela está sendo usada para
          estilizar este elemento no CSS e usada também no JavaScript para ocultar
@@ -122,7 +138,7 @@
 
     <script>
       // faz o vídeo desaparecer de leve assim que terminar
-      const TEMPO = 11000;  // 11s, duração do vídeo
+      const TEMPO = 1000;  // 11s, duração do vídeo
       setTimeout(() => {
         // faz o vídeo desaparecer colocando a classe .desaparecido
         document.querySelector('.backdrop').classList.add('desaparecido');
